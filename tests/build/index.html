@@ -6,9 +6,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="UI.css">
-    <script src="UI.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- Required for button gen -->
+	<link rel='stylesheet' href='https://bgrins.github.io/spectrum/spectrum.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:300,400,700"'>
+
     <title>EXAR AR Creator</title>
   </head>
   <body>
@@ -83,7 +86,7 @@
       <i id="p1" class="fa fa-caret-square-o-right"></i>
       </button>
     
-  </P>
+  </p>
   
   <div class="modal fade" id="exampleModalLon" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -192,12 +195,76 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-        <h1> 
-  
-          .....
-        </h1>
-              </div>
+        <div class="modal-body button-gen">
+
+          <!-- Starts -->
+          <h1>Customize Your Button</h1>
+          <div class="control-row">
+            <label for="background-color">Background Color:</label><input type="text" id="background-color"/>
+          </div>
+
+          <div class="control-row">
+            <label for="color">Font Color:</label>
+            <input type="text" id="color"/>
+          </div>
+
+          <div class="control-row">
+            <label for="border-radius">Border-radius:</label><input type="number" id="border-radius" min="0" max="99"/>
+          </div>
+
+          <div class="control-row">
+            <label for="font">Font:</label>
+            <select name="font" id="font">
+              <option value="Arial, sans-serif">Arial</option>
+              <option value="Arial Black, Arial, sans-serif">Arial Black</option>
+              <option value="Century Gothic, Times, serif">Century Gothic</option>
+              <option value="Courier, monospace">Courier</option>
+              <option value="Courier New, monospace">Courier New</option>
+              <option value="Geneva, Tahoma, Verdana, sans-serif">Geneva</option>
+              <option value="Georgia, Times, Times New Roman, serif">Georgia</option>
+              <option value="Helvetica, Arial, sans-serif">Helvetica</option>
+              <option value="Lucida, Geneva, Verdana, sans-serif">Lucida</option>
+              <option value="Tahoma, Verdana, sans-serif">Tahoma</option>
+              <option value="Times, Times New Roman, Baskerville, Georgia, serif">Times</option>
+              <option value="Times New Roman, Times, Georgia, serif">Times New Roman</option>
+              <option value="Verdana, Geneva, sans-serif">Verdana</option>
+              </select>
+          </div>
+
+          <div class="control-row">
+            <label for="font-size">Font-size:</label>
+            <input type="number" name="font-size" id="font-size" min="12" max="40"/>
+          </div>
+
+          <div class="control-row">
+            <label for="alignment">Alignment:</label>
+            <select name="alignment" id="alignment">
+              <option value="left">Left</option>
+              <option value="center">Center</option>
+              <option value="right">Right</option>
+              </select>
+          </div>
+
+          <div class="control-row">
+            <label for="text">Button Text:</label>
+            <input type="text" id="text"></text>
+          </div>
+
+          <div class="control-row">
+            <label for="href">Link Address:</label>
+            <input type="text" id="href"></text>
+          </div>
+
+      </div>
+
+      <div class="results-container flex-col">
+        <h1>Preview Your Button</h1>
+        <div class="button-container">
+      </div>
+
+      <!-- Ends -->
+    </div>
+        </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
@@ -212,4 +279,9 @@
     document.getElementById("but").style.display = "none";
   }
   </script>
+
+  <!-- Required for Button Gen -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://bgrins.github.io/spectrum/spectrum.js'></script>
+  <script src="UI.js"></script>
 </html>
